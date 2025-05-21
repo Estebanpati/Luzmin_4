@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from '../assets/imagenes-gpt/Luzmin-Logo.webp';
 import avatar from '../assets/imagenes-gpt/avatar.png';
 
-const Navbar = () => {
+const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">       
       <div className="container-fluid">
@@ -39,7 +39,16 @@ const Navbar = () => {
 
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="projectsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-haspopup="true"
+                onClick={e => e.preventDefault()}
+              >
                 Cartera de Proyectos Mineros
               </a>
               <ul className="dropdown-menu" aria-labelledby="projectsDropdown">
@@ -52,6 +61,36 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link className="nav-link" to="/monitoreo">Monitoreo Ambiental</Link>
+            </li>
+
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Base Layers</a>
+              <ul className="dropdown-menu">
+                
+                <li>
+                  <Link className="dropdown-item" to="/" onClick={() => setBaseLayer("OpenTopoMap")}>OpenTopoMap</Link>
+                </li>
+              </ul>
+            </li>
+
+
+             <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Overlays</a>
+              <ul className="dropdown-menu">
+                <li>
+                  <label className="dropdown-item"><input type="checkbox" value="Cities" checked={overlays.Cities} onChange={toggleOverlay}/>Cities</label>
+                </li>
+
+                <li className="dropdown-header">Puntos estratégicos a</li>
+
+                <li>
+                  <label className="dropdown-item"><input type="checkbox" value="Parks" checked={overlays.Parks} onChange={toggleOverlay}/>Parks</label>
+                </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                
+              </ul>
             </li>
 
 
