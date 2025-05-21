@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Inicio from "./componentsdos/Inicio"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Navbar_2 from "./components/Navbar_2";
+import Inicio from "./componentsdos/Inicio"
 import Nosotros from "./componentsdos/Nosotros";
 import SubirAreasMineras from "./componentsdos/SubirAreasMineras";
 import ProfesionalTecnico from "./componentsdos/ProfesionalTecnico";
@@ -11,10 +12,9 @@ import DetalleArea from "./componentsdos/DetalleArea";
 import Monitoreo from "./componentsdos/Monitoreo";
 import Map from "./components/Map";
 
-
 function App() {
-
-    const [baseLayer, setBaseLayer] = useState("OpenStreetMap");
+  const [showNavbar2, setShowNavbar2] = useState(false);
+  const [baseLayer, setBaseLayer] = useState("OpenStreetMap");
   const [overlays, setOverlays] = useState({
     Cities: true,
     Parks: false,
@@ -29,30 +29,35 @@ function App() {
   };
 
   return (
-    <div>
-      <Router>
-        <Navbar setBaseLayer={setBaseLayer}
-        toggleOverlay={toggleOverlay}
-        overlays={overlays} />
-        
+    <Router>
+      <>
+        {!showNavbar2 ? (
+          <Navbar
+            onShowNavbar2={() => setShowNavbar2(true)}
+            setBaseLayer={setBaseLayer}
+            toggleOverlay={toggleOverlay}
+            overlays={overlays}
+          />
+        ) : (
+          <Navbar_2 onBack={() => setShowNavbar2(false)} />
+        )}
         <Map baseLayer={baseLayer} overlays={overlays} />
-      
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Inicio />} />
-          <Route path="/Nosotros" element={<Nosotros/>}/>
+          <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/inversionistas" element={<Inversionistas />} />
           <Route path="/profesional-tecnico" element={<ProfesionalTecnico />} />
           <Route path="/subir-areas-mineras" element={<SubirAreasMineras />} />
           <Route path="/detalle-area/:id" element={<DetalleArea />} />
-          <Route path="/monitoreo" element={<Monitoreo/>}/>
+          <Route path="/monitoreo" element={<Monitoreo />} />
           <Route path="/mapa" element={<Map baseLayer={baseLayer} overlays={overlays} />} />
-          
         </Routes>
-        <Footer/>
-      </Router>
-    </div>
-  )
+        <Footer />
+      </>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
