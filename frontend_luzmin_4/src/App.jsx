@@ -1,12 +1,13 @@
-
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
- 
-
   return (
-    <div className="container-fluid bg-dark text-warning min-vh-100">
-  <h1>Mi primera Pagina Web</h1>
-</div>
+    <div className="container-fluid">
+      <Navbar />
+      <h1>Mi primera Pagina Web</h1>
+      <Footer />
+    </div>
   )
 }
 
