@@ -8,7 +8,7 @@ const Cuerpo = () => {
     <div className="container-fluid mt-1 bg-secondary">
       {/* Sección 1: Introducción */}
       <section className="text-center mb-5">
-        <h1 className="display-4 text-bg-secondary">MONITOREO DE VARIABLES HIDROLÓGICAS EN EDUCACIÓN SUPERIOR</h1>
+        <h1 className="display-4 text-bg-secondary">MONITOREO DE VARIABLES HIDROLÓGICAS</h1>
         <p className="lead text-bg-secondary">
           Nos dedicamos a impulsar la innovación en la industria minera, con un enfoque en la sostenibilidad y el progreso tecnológico.
         </p>
