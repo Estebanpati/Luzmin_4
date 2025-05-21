@@ -64,11 +64,18 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
             </li>
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Base Layers</a>
+              <a className="nav-link dropdown-toggle" href="mapa" role="button" data-bs-toggle="dropdown">
+                Base Layers
+              </a>
               <ul className="dropdown-menu">
-                
                 <li>
-                  <Link className="dropdown-item" to="/" onClick={() => setBaseLayer("OpenTopoMap")}>OpenTopoMap</Link>
+                  <button
+                    className="dropdown-item"
+                    type="button"
+                    onClick={() => setBaseLayer("OpenTopoMap")}
+                  >
+                    OpenTopoMap
+                  </button>
                 </li>
               </ul>
             </li>
@@ -92,11 +99,6 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
                 
               </ul>
             </li>
-
-
-
-
-
             
           </ul>
         </div>
@@ -107,3 +109,4 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
 
 export default Navbar;
 // Exportamos el componente para que pueda ser utilizado en otros archivos.
+

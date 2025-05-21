@@ -34,7 +34,9 @@ function App() {
         <Navbar setBaseLayer={setBaseLayer}
         toggleOverlay={toggleOverlay}
         overlays={overlays} />
-      <Map baseLayer={baseLayer} overlays={overlays} />
+        
+        <Map baseLayer={baseLayer} overlays={overlays} />
+      
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Inicio />} />
@@ -44,6 +46,8 @@ function App() {
           <Route path="/subir-areas-mineras" element={<SubirAreasMineras />} />
           <Route path="/detalle-area/:id" element={<DetalleArea />} />
           <Route path="/monitoreo" element={<Monitoreo/>}/>
+          <Route path="/mapa" element={<Map baseLayer={baseLayer} overlays={overlays} />} />
+          
         </Routes>
         <Footer/>
       </Router>
