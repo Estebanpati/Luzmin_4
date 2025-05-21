@@ -1,0 +1,19 @@
+.containeru {
+    background-color: #fffbfb;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #6b247b;
+  }
+  
+  h5 {
+    color: #a174ed;
+  }
+  
+  .chart-container {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
