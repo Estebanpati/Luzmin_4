@@ -37,6 +37,12 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
               <Link className="nav-link" to="/Nosotros">Nosotros</Link>
             </li>
 
+            <li className="nav-item">
+              <Link className="nav-link" to="/appdos">APP DOS</Link>
+            </li>
+
+
+
 
             <li className="nav-item dropdown">
               <a
@@ -63,43 +69,9 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
               <Link className="nav-link" to="/monitoreo">Monitoreo Ambiental</Link>
             </li>
 
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="mapa" role="button" data-bs-toggle="dropdown">
-                Base Layers
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => setBaseLayer("OpenTopoMap")}
-                  >
-                    OpenTopoMap
-                  </button>
-                </li>
-              </ul>
-            </li>
-
-
-             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Overlays</a>
-              <ul className="dropdown-menu">
-                <li>
-                  <label className="dropdown-item"><input type="checkbox" value="Cities" checked={overlays.Cities} onChange={toggleOverlay}/>Cities</label>
-                </li>
-
-                <li className="dropdown-header">Puntos estratégicos a</li>
-
-                <li>
-                  <label className="dropdown-item"><input type="checkbox" value="Parks" checked={overlays.Parks} onChange={toggleOverlay}/>Parks</label>
-                </li>
-
-                <li><hr className="dropdown-divider" /></li>
-
-                
-              </ul>
-            </li>
             
+
+
           </ul>
         </div>
       </div>
