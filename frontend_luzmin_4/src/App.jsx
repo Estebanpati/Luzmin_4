@@ -11,6 +11,7 @@ import DetalleArea from "./componentsdos/DetalleArea";
 import Monitoreo from "./componentsdos/Monitoreo";
 import Appdos from "./App_2";
 import Map from "./components/Map"; // <-- Agrega esta línea
+import App_Monitoreo_amb from "./App_Monitoreo_amb";
 
 function App() {
   // Agrega estos estados para Map
@@ -35,6 +36,7 @@ function App() {
           <Route path="/monitoreo" element={<Monitoreo />} />
           <Route path="/mapa" element={<Map baseLayer={baseLayer} overlays={overlays} />} />
           <Route path="/appdos" element={<Appdos />} />
+          <Route path="/monitoreo-ambiental" element={<App_Monitoreo_amb />} />
         </Routes>
         <Footer />
       </Router>

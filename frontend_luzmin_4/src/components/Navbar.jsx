@@ -42,6 +42,11 @@ const Navbar = ({ setBaseLayer, toggleOverlay, overlays }) => {
             </li>
 
 
+            <li className="nav-item">
+              <Link className="nav-link" to="/monitoreo-ambiental">Monitoreo Ambiental Para la Mineria</Link>
+            </li>
+
+
 
 
             <li className="nav-item dropdown">

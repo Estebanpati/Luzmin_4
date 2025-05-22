@@ -21,9 +21,9 @@ const Navbar_2 = ({ setBaseLayer, toggleOverlay, overlays }) => {
             href="mapa"
             role="button"
             data-bs-toggle="dropdown"
-            style={{ color: "yellow" }} // Cambia el color a amarillo
+            style={{ color: "yellow", padding: "1px", margin: "1px" }} // Color, padding y margin
           >
-            Base Layers
+            -- Base Layers --
           </a>
           <ul className="dropdown-menu">
             <li>
@@ -45,9 +45,9 @@ const Navbar_2 = ({ setBaseLayer, toggleOverlay, overlays }) => {
             href="#"
             role="button"
             data-bs-toggle="dropdown"
-            style={{ color: "yellow" }} // Cambia el color a amarillo
+            style={{ color: "yellow", padding: "1px", margin: "1px"}} // Cambia el color a amarillo
           >
-            Overlays
+            -- Overlays --
           </a>
           <ul className="dropdown-menu">
             <li>
